@@ -1,0 +1,31 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "color": "FireBrick",
+      "purchased": false,
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Saturn",
+      "model": "SL2",
+      "year": "1998",
+      "price": "1000",
+      "color": "Red",
+      "purchased": false,
+      "description": "This car will never die."
+    },
+    {
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": "2010",
+      "price": "9999",
+      "color": "White",
+      "purchased": false,
+      "description": "This is a good car that will make you happy and stuff."
+    }
+  ]
+}
