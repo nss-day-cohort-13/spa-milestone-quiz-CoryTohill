@@ -1,17 +1,21 @@
-var CarLot = (function () {
+var CarLot = (function (carlot) {
   var inventory = [];
 
-  return {
-    getInventory: function () {
 
-    },
-    loadInventory: function (callback) {
-      var inventoryLoader = new XMLHttpRequest();
-
-      inventoryLoader.addEventListener("load", function () {
-
-      });
-    }
+  carlot.getInventory = function () {
+    return inventory;
   };
 
-})();
+  carlot.loadInventory = function (callback) {
+    var inventoryLoader = new XMLHttpRequest();
+    inventoryLoader.open("GET", "inventory.json");
+    inventoryLoader.send();
+    inventoryLoader.addEventListener("load", function () {
+      inventory = JSON.parse(this.responseText);
+    });
+  };
+
+
+  return carlot;
+
+})(CarLot || {});
