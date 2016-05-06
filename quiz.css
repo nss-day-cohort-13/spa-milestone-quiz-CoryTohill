@@ -16,6 +16,7 @@ body {
   position: relative;
   min-height: 400px;
   text-align: center;
+  border: 2px solid;
   }
 
 .purchased {
@@ -23,4 +24,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.selectedCarCard {
+  border: 6px solid red;
+  background-color: aqua;
 }

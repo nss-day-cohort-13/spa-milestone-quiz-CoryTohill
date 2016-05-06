@@ -6,7 +6,7 @@ function styleCarCards (inventory) {
   var carCards = document.getElementsByClassName("carCards");
 
   for (i = 0; i < carCards.length; i++) {
-    carCards[i].style.border = `2px solid ${inventory.cars[i].color}`;
+    carCards[i].style.borderColor = inventory.cars[i].color;
   };
 };
 

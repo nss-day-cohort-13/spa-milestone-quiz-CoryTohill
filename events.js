@@ -2,29 +2,42 @@ var CarLot = (function (carlot) {
 
 
   //tests an element and each of its parents to determine if it is, or exists inside of,
-  // a div with class carCards. If it does, it also returns the carCards div
-  function isElementInACarCard (currentElement) {
-    while (currentElement !==  null){
-      if (currentElement.className && currentElement.className.includes("carCards")) {
+  // a div with class carCards. If it does, it also returns the carCards div the element is in
+  function checkElementAndParentsForClass (element, nameOfClass) {
+    while (element !==  null){
+      if (element.className && element.className.includes(nameOfClass)) {
         return {
           bolean: true,
-          cardElement: currentElement
+          selectedCardElement: element
         };
       };
-      currentElement = currentElement.parentNode;
+      element = element.parentNode;
     };
     return {
       bolean: false
     };
   };
 
+  // creates an array of a specified element and all its siblings;
+  // if any elements have the specified class, the class is removed
+  function removeClassFromElementAndSiblings (element, nameOfClass) {
+    var carCardsArray = element.parentNode.childNodes;
+
+    for (i = 0; i < carCardsArray.length; i++) {
+      if (carCardsArray[i].className && carCardsArray[i].className.includes(nameOfClass)) {
+        carCardsArray[i].classList.remove(nameOfClass);
+      };
+    };
+  };
 
 
   function cardSelectionActions () {
+    var selectedElement = checkElementAndParentsForClass(event.target, "carCards");
 
-    if (isElementInACarCard(event.target).bolean) {
-      isElementInACarCard(event.target).cardElement.style.borderWidth = "6px";
-      isElementInACarCard(event.target).cardElement.style.backgroundColor = "aqua";
+    removeClassFromElementAndSiblings(selectedElement.selectedCardElement, "selectedCarCard");
+
+    if (selectedElement.bolean) {
+      selectedElement.selectedCardElement.classList.add("selectedCarCard");
     };
   };
 
