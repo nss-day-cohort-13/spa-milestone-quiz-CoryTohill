@@ -8,7 +8,7 @@ var CarLot = (function (carlot) {
 
   //tests an element and each of its parents to determine if it is, or exists inside of,
   // an element with class carCards. If it does, it also returns the carCards div the element is in
-  var checkElementAndParentsForClass = function (element) {
+  function checkElementAndParentsForClass (element) {
     while (element !==  null){
       if (element.className && element.className.includes("carCards")) {
         return {

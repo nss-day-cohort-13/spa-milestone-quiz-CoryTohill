@@ -5,6 +5,15 @@
 var containerDiv = document.getElementsByClassName("container");
 
 
+
+
+
+
+
+
+
+
+
 // function that will apply initial unique stylings to all car cards based on car color
 function styleCarCards (inventory) {
   var carCards = document.getElementsByClassName("carCards");
