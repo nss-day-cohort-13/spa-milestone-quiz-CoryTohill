@@ -17,6 +17,11 @@ function populatePage (inventory) {
   // Loop over the inventory and populate the page
   for (i = 0; i < inventory.cars.length; i++) {
     var currentCar = inventory.cars[i];
+    if (currentCar.purchased){
+      var availability = "Sold";
+    } else {
+      var availability = "Available";
+    };
 
     HTMLBuilder += `<div class="carCards col-lg-4">`
                 + `<h1 class="make">${currentCar.make}</h1>`
@@ -25,7 +30,7 @@ function populatePage (inventory) {
                 + `<p class="color">${currentCar.color}</p>`
                 + `<p class="description">${currentCar.description}</p>`
                 + `<h2 class="price">${currentCar.price}</h2>`
-                + `<p class="purchased">${currentCar.purchased}</p>`
+                + `<p class="purchased">${availability}</p>`
                 + `</div>`;
   };
   containerDiv[0].innerHTML = HTMLBuilder;

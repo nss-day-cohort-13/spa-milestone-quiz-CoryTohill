@@ -15,7 +15,7 @@
       "year": "1998",
       "price": "1000",
       "color": "Blue",
-      "purchased": false,
+      "purchased": true,
       "description": "This car will never die."
     },
     {
