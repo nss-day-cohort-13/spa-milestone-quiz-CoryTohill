@@ -18,7 +18,7 @@ function populatePage (inventory) {
   for (i = 0; i < inventory.cars.length; i++) {
     var currentCar = inventory.cars[i];
 
-    HTMLBuilder += `<div class="carCards">`
+    HTMLBuilder += `<div class="carCards col-lg-4">`
                 + `<h1 class="make">${currentCar.make}</h1>`
                 + `<h2 class="model">${currentCar.model}</h2>`
                 + `<h2 class="year">${currentCar.year}</h2>`
