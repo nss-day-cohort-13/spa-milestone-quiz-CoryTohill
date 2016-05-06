@@ -25,10 +25,11 @@ var CarLot = (function (carlot) {
 
 
   // adds the selectedCarCard class to a car card when either a card, or any descendant of a card, is selected
-  carlot.addSelectedCardStyles = function (element) {
+  carlot.addSelectedCardStyles = function (element, color) {
     var selectedElement = checkElementAndParentsForClass(element);
     if (selectedElement.bolean) {
       selectedElement.selectedCard.classList.add("selectedCarCard");
+      selectedElement.selectedCard.style.backgroundColor = color;
     };
   }
 
@@ -40,6 +41,7 @@ var CarLot = (function (carlot) {
     for (i = 0; i < carCards.length; i++) {
       if (carCards[i].className && carCards[i].className.includes("selectedCarCard")) {
         carCards[i].classList.remove("selectedCarCard");
+        carCards[i].style.backgroundColor = "lightblue";
       };
     };
   };

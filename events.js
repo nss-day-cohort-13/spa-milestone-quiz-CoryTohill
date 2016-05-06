@@ -7,7 +7,7 @@ var CarLot = (function (carlot) {
 
   function cardSelectionActions () {
    carlot.removeSelectedCardStyles(event.target);
-   carlot.addSelectedCardStyles(event.target);
+   carlot.addSelectedCardStyles(event.target, "aqua");
   };
 
 
