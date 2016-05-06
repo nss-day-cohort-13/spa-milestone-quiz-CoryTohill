@@ -1,3 +1,7 @@
+// *******************************************************
+//                     Main JS File
+// *******************************************************
+
 var containerDiv = document.getElementsByClassName("container");
 
 
