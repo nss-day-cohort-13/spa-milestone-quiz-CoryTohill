@@ -1,7 +1,6 @@
 var CarLot = (function (carlot) {
   var inventory = [];
 
-
   carlot.getInventory = function () {
     return inventory;
   };
@@ -12,6 +11,7 @@ var CarLot = (function (carlot) {
     inventoryLoader.send();
     inventoryLoader.addEventListener("load", function () {
       inventory = JSON.parse(this.responseText);
+      callback(inventory);
     });
   };
 
