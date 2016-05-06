@@ -1,0 +1,85 @@
+html{
+  height: 100%;
+}
+body {
+  background-color: lightgray;
+  height: 100%;
+}
+
+.navbar {
+  background-color: gray;
+  text-align: center;
+}
+
+
+
+/********************************************************
+                      Card Styles
+********************************************************/
+
+.container {
+  display: flex;
+}
+
+.carCards {
+  background-color: lightblue;
+  align-items: stretch;
+  position: relative;
+  min-height: 400px;
+  text-align: center;
+  border: 3px solid;
+  margin: 0 25px;
+  border-radius: 2em;
+  }
+
+.make {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.model {
+  font-weight: bold;
+}
+
+.model,
+.year {
+  font-size: 2em;
+}
+
+.color {
+  font-size: 1.5em;
+}
+
+.description {
+  margin-bottom: 100px;
+}
+
+.price {
+  font-size: 2.25em;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 50px;
+}
+
+.purchased {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+/********************************************************
+                  Selected Card Styles
+********************************************************/
+
+.selectedCarCard {
+  border: 10px solid;
+  box-shadow: 10px 10px 10px black;
+}
+
+
