@@ -4,7 +4,8 @@
 
 var CarLot = (function (carlot) {
 
-var userInput = document.getElementById("userInput");
+
+  var userInput = document.getElementById("userInput");
 
   // all actions that will be run when a card is clicked on
   function cardSelectionActions () {

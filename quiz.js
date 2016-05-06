@@ -5,15 +5,6 @@
 var containerDiv = document.getElementsByClassName("container");
 
 
-
-
-
-
-
-
-
-
-
 // function that will apply initial unique stylings to all car cards based on car color
 function styleCarCards (inventory) {
   var carCards = document.getElementsByClassName("carCards");
@@ -24,6 +15,7 @@ function styleCarCards (inventory) {
 };
 
 
+// inserts inventory into the DOM
 function populatePage (inventory) {
   var HTMLBuilder = "";
 
@@ -42,7 +34,7 @@ function populatePage (inventory) {
                 + `<h2 class="year">${currentCar.year}</h2>`
                 + `<p class="color">${currentCar.color}</p>`
                 + `<p class="description">${currentCar.description}</p>`
-                + `<h2 class="price">${currentCar.price}</h2>`
+                + `<h2 class="price">$${currentCar.price}</h2>`
                 + `<p class="purchased">${availability}</p>`
                 + `</div>`;
   };

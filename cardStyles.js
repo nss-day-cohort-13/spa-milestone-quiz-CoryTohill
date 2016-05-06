@@ -2,7 +2,6 @@
 //               Add and Remove Card Styles
 // *******************************************************
 
-
 var CarLot = (function (carlot) {
 
 
