@@ -37,7 +37,7 @@ function populatePage (inventory) {
   styleCarCards(inventory);
 
   // Now that the DOM is loaded, establish all the event listeners needed
-  // CarLot.activateEvents();
+  CarLot.activateEvents(containerDiv[0]);
 };
 
 
